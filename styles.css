@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101820;
+    color: #FEE715;
+    font-family: 'JetBrains Mono', monospace;
+}
+header {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+.box {
+    background-color: #1c2836;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input[type="url"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #FEE715;
+    border-radius: 4px;
+    background-color: #101820;
+    color: #FEE715;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+}
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #FEE715;
+    color: #101820;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+}
+button:hover {
+    background-color: #FFD700;
+}
+.description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #a0a0a0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+li::before {
+    content: "•";
+    color: #FEE715;
+    font-size: 1.2em;
+    margin-right: 0.5rem;
+}
+.blog {
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+.blog h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.blog p {
+    color: #a0a0a0;
+    line-height: 1.6;
+}
