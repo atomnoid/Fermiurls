@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #101820;
+    color: #FEE715;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    background-color: #FEE715;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 150%;
+    max-width: 500px;
+    text-align: center;
+}
+h1 {
+    align-items: top;
+    justify-content: top;
+}
+header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #101820; /* Dark text */
+}
+
+header p {
+    font-size: 18px;
+    color: #101820; /* A lighter color for the description */
+}
+
+main {
+    margin-top: 20px;
+}
+
+#url-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#long-url {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #101820;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #101820;
+    color: #FEE715;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#short-url-container {
+    margin-top: 20px;
+}
+
+.result-box {
+    display: flex;
+    gap: 10px;
+}
+
+.result-box input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #FEE715;
+    border-radius: 5px;
+    background-color: #FEE715;
+}
+
+#copy-btn {
+    padding: 12px 20px;
+    background-color: #101820;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
