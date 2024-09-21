@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fermiurls</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Fermiurls Link Shortener</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header>
@@ -31,6 +32,31 @@
         </ul>
         <button style="margin-top: 1rem; width: 100%;">Upgrade to Pro</button>
     </section>
+    <section class="box">
+        <h2>Why us?</h2>
+        <div class="why-us">
+            <div class="why-us-item">
+                <i data-lucide="zap"></i>
+                <h3>Fast and easy to share</h3>
+                <p>Create and share shortened URLs in seconds</p>
+            </div>
+            <div class="why-us-item">
+                <i data-lucide="bar-chart"></i>
+                <h3>Analytics feature</h3>
+                <p>Track clicks and gather insights on your links</p>
+            </div>
+            <div class="why-us-item">
+                <i data-lucide="shield"></i>
+                <h3>Secure</h3>
+                <p>Your data and links are protected with us</p>
+            </div>
+            <div class="why-us-item">
+                <i data-lucide="smartphone"></i>
+                <h3>All device compatible</h3>
+                <p>Works seamlessly across all platforms</p>
+            </div>
+        </div>
+    </section>
     <section class="blog">
         <h2>Simple and fast URL shortener</h2>
         <p>
@@ -43,5 +69,22 @@
             Fermiurls stands out as the premier URL shortening service, offering unparalleled ease of use and powerful tracking capabilities. Our lightning-fast shortening process creates compact, memorable links perfect for social media, email campaigns, and personal sharing. With Fermiurls, you gain instant access to comprehensive analytics, allowing you to monitor click-through rates, geographic data, and engagement metrics in real-time. Elevate your link management strategy and make every character count with Fermiurls – where shortening, sharing, and tracking converge for maximum impact.
         </p>
     </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Fermiurls</div>
+            <nav class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Fermiurls. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
