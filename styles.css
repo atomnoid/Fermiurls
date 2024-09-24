@@ -9,8 +9,7 @@ body {
     color: #FEE715;
     font-family: 'JetBrains Mono', monospace;
 }
-
-header {
+header{
     padding-top: 2rem;
     margin-bottom: 2rem;
     width: 80%;
