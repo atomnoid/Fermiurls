@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,30 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
     <header>
         <h1>Fermiurls</h1>
     </header>
     <main class="box">
         <h2>Paste your link</h2>
-        <form action="urls.html" method="GET">
+        <form id="shorten-form">
+            <input type="url" id="long-url" placeholder="https://example.com/long-url" required>
+            <button type="submit">Shorten URL</button>
+        </form>
+        <div id="result"></div>
+
+        <!-- <form action="urls.html" method="GET">
             <input type="url" id="long-url" name="long-url" placeholder="https://example.com/long-url" required>
             <button type="submit">Shorten URL</button>
-        </form>  
+        </form>   -->
         <!-- <form>
             <input type="url" id="long-url" name="long-url" placeholder="https://example.com/long-url" required>
             <button type="submit">Shorten URL</button>
         </form> -->
         <p class="description">
-            URL shortening transforms long web addresses into concise links. It enhances sharing, improves aesthetics, and provides click tracking. Ideal for social media, messaging, and marketing campaigns.
+            URL shortening transforms long web addresses into concise links. It enhances sharing, improves aesthetics,
+            and provides click tracking. Ideal for social media, messaging, and marketing campaigns.
         </p>
     </main>
     <section class="box">
@@ -64,13 +73,21 @@
     <section class="blog">
         <h2>Simple and fast URL shortener</h2>
         <p>
-            Fermiurls offers a streamlined solution for shortening lengthy web addresses. Our user-friendly interface allows you to create concise, shareable links in seconds. Whether you're managing social media campaigns, optimizing email marketing, or simply sharing links with friends, Fermiurls provides the speed and simplicity you need. Experience the power of efficient link management with Fermiurls today.
+            Fermiurls offers a streamlined solution for shortening lengthy web addresses. Our user-friendly interface
+            allows you to create concise, shareable links in seconds. Whether you're managing social media campaigns,
+            optimizing email marketing, or simply sharing links with friends, Fermiurls provides the speed and
+            simplicity you need. Experience the power of efficient link management with Fermiurls today.
         </p>
     </section>
     <section class="blog">
         <h2>Short, Share and Track</h2>
         <p>
-            Fermiurls stands out as the premier URL shortening service, offering unparalleled ease of use and powerful tracking capabilities. Our lightning-fast shortening process creates compact, memorable links perfect for social media, email campaigns, and personal sharing. With Fermiurls, you gain instant access to comprehensive analytics, allowing you to monitor click-through rates, geographic data, and engagement metrics in real-time. Elevate your link management strategy and make every character count with Fermiurls – where shortening, sharing, and tracking converge for maximum impact.
+            Fermiurls stands out as the premier URL shortening service, offering unparalleled ease of use and powerful
+            tracking capabilities. Our lightning-fast shortening process creates compact, memorable links perfect for
+            social media, email campaigns, and personal sharing. With Fermiurls, you gain instant access to
+            comprehensive analytics, allowing you to monitor click-through rates, geographic data, and engagement
+            metrics in real-time. Elevate your link management strategy and make every character count with Fermiurls –
+            where shortening, sharing, and tracking converge for maximum impact.
         </p>
     </section>
     <footer>
@@ -89,6 +106,23 @@
     </footer>
     <script>
         lucide.createIcons();
+
+        document.getElementById("shorten-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const longUrl = document.getElementById("long-url").value;
+
+            const response = await fetch("/shorten", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ longUrl }),
+            });
+
+            const data = await response.json();
+            document.getElementById("result").innerHTML = `
+      <p>Shortened URL: <a href="${data.shortUrl}" target="_blank">${data.shortUrl}</a></p>
+    `;
+        });
     </script>
 </body>
+
 </html>
