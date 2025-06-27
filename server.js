@@ -16,7 +16,7 @@ const urlDatabase = {};
 app.post("/shorten", (req, res) => {
   const { longUrl } = req.body;
   const shortId = nanoid(6);
-  const shortUrl = `http://localhost:${PORT}/${shortId}`;
+  const shortUrl = `http://fermiurl:${PORT}/${shortId}`;
   urlDatabase[shortId] = longUrl;
   res.json({ shortUrl });
 });
